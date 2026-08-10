@@ -132,7 +132,7 @@ export function ConversationPanel() {
   if (!session) {
     return (
       <div className={`flex h-full items-center justify-center p-4 ${emptyState}`}>
-        Open a Claude Code JSONL file to explore the session
+        Open an agent session JSONL file to explore it
       </div>
     )
   }

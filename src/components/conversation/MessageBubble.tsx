@@ -57,7 +57,9 @@ export function SystemMessage({ item, selected, onSelect }: MessageBubbleProps) 
         }`}
       >
         <span className="font-medium uppercase tracking-wide">System</span>
-        <p className="mt-1 whitespace-pre-wrap">{item.event.preview}</p>
+        <p className="mt-1 whitespace-pre-wrap">
+          {item.block?.text ?? item.event.preview}
+        </p>
       </button>
     </div>
   )

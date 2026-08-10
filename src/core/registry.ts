@@ -1,10 +1,15 @@
 import { claudeTranscriptAdapter } from '../adapters/claude-transcript'
 import { codexRolloutAdapter } from '../adapters/codex-rollout'
+import { piSessionAdapter } from '../adapters/pi-session'
 import type { SessionAdapter } from '../adapters/types'
 import { parseJsonlText } from './jsonl'
 import type { ExplorerSession } from './types'
 
-const adapters: SessionAdapter[] = [claudeTranscriptAdapter, codexRolloutAdapter]
+const adapters: SessionAdapter[] = [
+  claudeTranscriptAdapter,
+  codexRolloutAdapter,
+  piSessionAdapter,
+]
 
 export function getAdapters(): SessionAdapter[] {
   return adapters
@@ -27,7 +32,7 @@ export function detectAndParse(text: string, fileName: string): ExplorerSession 
 
   if (bestScore < 0.5) {
     throw new Error(
-      'Unrecognized JSONL format. Supported formats: Claude Code transcripts and Codex rollout logs.',
+      'Unrecognized JSONL format. Supported formats: Claude Code transcripts, Codex rollout logs, and Pi sessions.',
     )
   }
 

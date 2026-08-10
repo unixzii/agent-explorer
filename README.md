@@ -51,6 +51,7 @@ The app inspects the first lines of a JSONL file and picks the best-matching ada
 |--------|-------------|
 | Claude Code transcript | Per-line `user` / `assistant` events with `message.content` blocks |
 | Codex rollout | Envelope records such as `session_meta`, `turn_context`, `event_msg`, and `response_item` |
+| Pi session | Tree-structured Pi agent sessions with messages, tool calls/results, model changes, compactions, branch summaries, and extension entries |
 
 Support of more file formats is on the way.
 
