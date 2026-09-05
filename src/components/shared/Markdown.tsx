@@ -57,7 +57,7 @@ const components: Components = {
     )
   },
   pre: ({ children }) => (
-    <pre className="my-2 overflow-auto rounded-lg border border-separator bg-background px-3 py-2 text-xs leading-relaxed">
+    <pre className="my-2 overflow-x-hidden overflow-y-auto whitespace-pre-wrap [overflow-wrap:anywhere] rounded-lg border border-separator bg-background px-3 py-2 text-xs leading-relaxed">
       {children}
     </pre>
   ),

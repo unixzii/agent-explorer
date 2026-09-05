@@ -28,7 +28,7 @@ export function ExpandablePre({
   return (
     <div>
       <pre
-        className={`max-h-72 overflow-auto whitespace-pre-wrap text-xs leading-relaxed text-secondary ${mono ? 'font-mono' : 'font-sans'} ${className}`}
+        className={`max-h-72 overflow-x-hidden overflow-y-auto whitespace-pre-wrap [overflow-wrap:anywhere] text-xs leading-relaxed text-secondary ${mono ? 'font-mono' : 'font-sans'} ${className}`}
       >
         {displayText}
       </pre>
